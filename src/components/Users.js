@@ -4,7 +4,7 @@ import React from 'react'
   const { details } = props
 
   if (!details) {
-    return <h3>Working fetching user details...</h3>
+    return <h3>Working on fetching user details...</h3>
   }
 
   return (

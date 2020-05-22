@@ -30,22 +30,22 @@ function App() {
   const [disabled, setDisabled] = useState(initialDisabled)
 
   const getUsers = () => {
-    axios.get('http://reqres.in/api/users')
+    axios.get('http://reqres.in/api/users_')
       .then(response => {
         setUsers(response.data)
       })
       .catch(err => {
-        debugger
+        console.log(err)
       })
   }
 
   const postNewUser = newUser => {
-    axios.post('http://reqres.in/api/users', newUser)
+    axios.post('http://reqres.in/api/users_', newUser)
       .then(response => {
         setUsers([response.data, ...users])
       })
       .catch(err => {
-        debugger
+        console.log(err)
       })
       .finally(() => {
         setFormValues(initialFormValues)
